@@ -1,0 +1,36 @@
+﻿<html><!--상품이 등록되거나 제거되고, 또 상품 목록과 매상 목록을 알아볼수있는 관리자페이지 이다. 신상품 추가 시에는 상품 code와 이름과 가격이 insert.php로 넘어가고 상품제거시에는 code만 delete.php로 넘어간다.-->
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>상품 관리 post</title>
+
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+<form name="form3" target="_blank" action="list.php">
+<p align="center"><b><span style="font-size:48pt;"><font face="HY울릉도B">상품관리</font><font face="굴림"> &nbsp;&nbsp;</font></span></b><input type="submit" name="list" value="상품리스트보기" style="font-family:HY울릉도B; font-size:36;"></p> <!--상품 등록 리스트(list.php)로 넘어가는 버튼-->
+</form>
+<form name="form4" method="post" action="sold_book.php" style="font-family:HY울릉도B; font-size:36;" target="_blank">
+<p align="center"><font face="굴림">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><input type="submit" name="sold_list" value="매상장부보기" style="font-family:HY울릉도B; font-size:36;"></p> <!--매상 장부(sold_book.php)로 넘어가는 버튼-->
+</form>
+<p>&nbsp;</p>
+<form name="form1" method="post" action="insert.php"> <!--상품 등록 과정이다. code와 상품명, 가격정보는 insert.php로 넘어간다. 이후 설명은 insert.php참조-->
+    <p align="center"><font face="HY울릉도B"><span style="font-size:36pt;">* 상품 추가시 *</span></font></p>
+    <p>&nbsp;</p>
+    <p><font face="HY울릉도B"><span style="font-size:36pt;">상품 바코드 : <input type="text" name="code" style="font-family:HY울릉도B; font-size:50; border-width:2; border-color:black; border-style:double;" size="25"></span></font></p><!--바코드로 code를 입력할 경우 바코드에서 자동enter기능 (바코드 환경설정마다 다르지만 QR이라고 되어있을 것이다)을 none으로 바꾸어야 한다. 아니면 code값만 자동 입력되어 귀찮은 일이 벌어질 것이다.-->
+    <p><font face="HY울릉도B"><span style="font-size:36pt;">상품 이름</span></font><span style="font-size:36pt;"><font face="돋움"> &nbsp;&nbsp;&nbsp;</font></span><font face="HY울릉도B"><span style="font-size:36pt;">: <input type="text" name="name" style="font-family:HY울릉도B; font-size:50; border-width:2; border-color:black; border-style:double;" size="25"></span></font></p>
+    <p><font face="HY울릉도B"><span style="font-size:36pt;">상품 가격</span></font><span style="font-size:36pt;"><font face="돋움"> &nbsp;&nbsp;&nbsp;</font></span><font face="HY울릉도B"><span style="font-size:36pt;">: <input type="text" name="price" style="font-family:HY울릉도B; font-size:50; border-width:2; border-color:black; border-style:double;" size="25">원</span></font></p>
+    <p><input type="submit" name="post" value="상품추가" style="font-family:HY울릉도B; font-size:50;"></p><!--초기 등록이란 꽤 힘들고 귀찮은 일이지만 이렇게 해야만 프로그램이 돌아간다.-->
+
+</form>
+<form name="form2" method="post" action="delete.php"> <!--상품 제거 과정이다. code정보는 delete.php로 넘어간다. 이후 설명은 delete.php참조-->
+    <p align="center"><font face="HY울릉도B"><span style="font-size:36pt;">* 상품 제거시 *</span></font></p>
+    <p>&nbsp;</p>
+    <p><font face="HY울릉도B"><span style="font-size:36pt;">상품 바코드 : <input type="text" name="code" style="font-family:HY울릉도B; font-size:50; border-width:2; border-color:black; border-style:double;" size="25"></span></font></p>
+    <p>&nbsp;</p>
+    <p><input type="submit" name="post" value="상품제거" style="font-family:HY울릉도B; font-size:50;"></p>
+</form>
+<p>&nbsp;</p>
+</body>
+
+</html><!--builded Web-Application by KAERIUS-->
